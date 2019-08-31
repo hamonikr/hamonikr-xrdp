@@ -26,5 +26,11 @@ xdrp setting tool for HamoniKR-ME (>= 1.4)
  * 접속하려는 하모니카 PC는 로그아웃 상태로 대기해야 합니다.
  * 다중 사용자를 지원하지만 원격지 PC의 사용자가 로그인 중인 경우 일부 프로그램은 작동되지 않습니다.
 
+# 성능확인
+
+하모니카 원격 데스크탑 접속 데모 영상
+
+[![demo](https://img.youtube.com/vi/PQfToOcWuHs/0.jpg)](https://www.youtube.com/watch?v=PQfToOcWuHs) 
+
  # 이슈 또는 버그
  사용 중 문제를 발견하시면 root@hamonikr.org 또는 https://groups.google.com/forum/m/#!forum/hamonikr 에서 알려주세요.
