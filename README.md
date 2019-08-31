@@ -1,5 +1,6 @@
 ![hamonikr-me](https://img.shields.io/badge/hamonikr-me-orange)
 ![hamonikr-64](https://img.shields.io/badge/hamonikr-64bit-green)
+![hamonikr-1.4](https://img.shields.io/badge/hamonikr-1.4-blueviolet)
 
 # RDP for hamonikr
 
