@@ -3,12 +3,27 @@
 # xdrp setting tool for HamoniKR-ME (>= 1.4)
 # Kevin Kim (root@hamonikr.org)
 #
-# Only Tested for HamoniKR
-#
+# hamonikr-xrdp
+# xdrp setting tool for HamoniKR-ME (>= 1.4)
+# Copyright (C) 2019 Kevin Kim (root@hamonikr.org)
 # - enable sound redirection
 # - enable clipboard (file copy and paste)
 # - compress transfer packet
 # - performance turning
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 WORKDIR=$PWD
 
@@ -120,9 +135,6 @@ create_polkit
 enable_sound
 
 # post settings
-
-# disable FuseMount
-#sudo sed -i 's/FuseMountName=thinclient_drives/#FuseMountName=thinclient_drives/g' /etc/xrdp/sesman.ini 
 
 # 하모니카에서 테스트 된 설정 파일들 반영
 sudo cp -r $WORKDIR/usr $WORKDIR/etc /
