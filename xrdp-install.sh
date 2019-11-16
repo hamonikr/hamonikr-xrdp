@@ -42,6 +42,7 @@ install_xrdp()
 	echo
 
 	# remove previous install
+	sudo apt-get update	
 	sudo systemctl stop xrdp
 	sudo apt-get remove --purge -y xrdp xorgxrdp xrdp-pulseaudio-installer
 	sudo apt-get -y autoremove
