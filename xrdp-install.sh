@@ -50,17 +50,17 @@ install_xrdp()
 	sudo rm -rf  /var/lib/xrdp-pulseaudio-installer/{module-xrdp-sink.so,module-xrdp-source.so}
 	sudo rm -rf /usr/lib/pulse-11.1/modules/{module-xrdp-sink.so,module-xrdp-source.so}
 
-	# sudo apt-get install -y xrdp xorgxrdp
-    sudo apt-get install autoconf libtool nasm libfuse-dev libmp3lame-dev libfdk-aac-dev libjpeg-turbo8 libopus-dev
+	sudo apt-get install -y xrdp xorgxrdp
+	sudo apt-get install autoconf libtool nasm libfuse-dev libmp3lame-dev libfdk-aac-dev libjpeg-turbo8 libopus-dev
     
-    git clone https://github.com/neutrinolabs/xrdp.git
-    cd xrdp
-    sudo ./bootstrap
-        
+	git clone https://github.com/neutrinolabs/xrdp.git
+	cd xrdp
+	sudo ./bootstrap
+	
 	sudo ./configure --prefix=/usr --bindir=/usr/bin --sysconfdir=/etc/xrdp --enable-fuse --enable-jpeg --enable-rfxcodec --enable-mp3lame --enable-fdkaac --enable-pixman --enable-vsock --enable-tjpeg=/usr/lib/x86_64-linux-gnu --enable-opus
 
-    sudo make
-    sudo make install  
+	sudo make
+	sudo make install  
 }
 
 allow_console() 
