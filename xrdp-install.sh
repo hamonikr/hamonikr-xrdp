@@ -82,7 +82,7 @@ create_polkit()
 	echo
 
 	sudo cp -r $WORKDIR/etc /
-
+	sudo cp -r $WORKDIR/etc/skel/.config/autostart/keyboardsetting.desktop /home/*/.config/autostart/
 }
 
 enable_sound()
@@ -144,8 +144,6 @@ sudo chown root:root /etc /usr
 # 키보드 사용을 위한 설정 
 localectl --no-convert set-x11-keymap kr pc105 kr106
 sudo xrdp-genkeymap /etc/xrdp/km-e0010412.ini
-echo "xmodmap -e 'keycode 122 = Hangul' ; xmodmap -e 'keycode 121 = Hangul_Hanja'" > ~/.xsessionrc
-echo "export CINNAMON_2D=true" >> ~/.xsessionrc
 
 # disable screensaver
 cinnamon-screensaver-command --exit

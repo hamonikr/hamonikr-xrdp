@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ ! $DISPLAY = ":0" ]
+then
+  xmodmap -e 'keycode 122 = Hangul' ; xmodmap -e 'keycode 121 = Hangul_Hanja'
+  export CINNAMON_2D=true
+fi

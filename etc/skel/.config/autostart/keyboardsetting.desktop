@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=keyboard setting
+Comment=Key Board Setting
+Exec=keyboardsetting
+Terminal=false
+Type=Application

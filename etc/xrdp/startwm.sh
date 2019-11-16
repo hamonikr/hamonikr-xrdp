@@ -34,8 +34,8 @@ fi
 echo "env -u SESSION_MANAGER -u DBUS_SESSION_BUS_ADDRESS cinnamon-session" > ~/.xsession
 
 # keyborad setting
-echo "xmodmap -e 'keycode 122 = Hangul' ; xmodmap -e 'keycode 121 = Hangul_Hanja'" > ~/.xsessionrc
-echo "export CINNAMON_2D=true" >> ~/.xsessionrc
+xmodmap -e 'keycode 122 = Hangul' ; xmodmap -e 'keycode 121 = Hangul_Hanja'
+export CINNAMON_2D=true
 
 # disable screensaver
 cinnamon-screensaver-command --exit
