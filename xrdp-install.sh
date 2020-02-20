@@ -51,7 +51,7 @@ install_xrdp()
 	sudo rm -rf /usr/lib/pulse-11.1/modules/{module-xrdp-sink.so,module-xrdp-source.so}
 
 	sudo apt-get install -y xrdp xorgxrdp
-	sudo apt-get install autoconf libtool nasm libfuse-dev libmp3lame-dev libfdk-aac-dev libjpeg-turbo8 libopus-dev
+	sudo apt-get install -y autoconf libtool nasm libfuse-dev libmp3lame-dev libfdk-aac-dev libjpeg-turbo8 libopus-dev
     
 	git clone https://github.com/neutrinolabs/xrdp.git
 	cd xrdp
@@ -94,7 +94,7 @@ enable_sound()
 	echo
 
 	# Step 1 - Install xrdp-pulseaudio-installer package
-	sudo apt-get install xrdp-pulseaudio-installer -y
+	sudo apt-get install -y xrdp-pulseaudio-installer
 
 	# Step 2 - Enable Source Code Repository
 	sudo cp -r $WORKDIR/etc /
