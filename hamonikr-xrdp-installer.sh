@@ -571,6 +571,16 @@ echo
 /bin/echo -e "\e[1;33m   |-| Creating Polkit exceptions rules...    \e[0m"
 echo
 
+#Allow wifi scan on Ubuntu 22.04 (https://devicetests.com/fix-wifi-scans-focal-fossa)
+sudo bash -c "cat >/etc/polkit-1/localauthority/50-local.d/47-allow.wifi-scan.pkla" <<EOF
+[Allow Wifi Scan]
+Identity=unix-user:*
+Action=org.freedesktop.NetworkManager.wifi.scan;org.freedesktop.NetworkManager.enable-disable-wifi;org.freedesktop.NetworkManager.settings.modify.own;org.freedesktop.NetworkManager.settings.modify.system;org.freedesktop.NetworkManager.network-control
+ResultAny=yes
+ResultInactive=yes
+ResultActive=yes
+EOF
+
 #All Ubuntu versions,Debian Version, Pop OS version
 sudo bash -c "cat >/etc/polkit-1/localauthority/50-local.d/45-allow.colord.pkla" <<EOF
 [Allow Colord all Users]
